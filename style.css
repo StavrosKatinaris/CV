@@ -1,34 +1,61 @@
 html{
-    background: rgb(69, 69, 69);
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(255, 165, 89);
+    background: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
     text-align: center;
 }
 
 .my_name{
     font-weight: 500;
+    margin-bottom: 0px;
 }
 
 .job_title{
+    margin-top: 0px;
     font-weight: 100;
 }
 
 .samary{
     text-align: center;
+    font-style: italic;
 }
 
 .phone{
     text-align: right;
+    margin-bottom: 0px;
 }
 
 .email{
     text-align: right;
+    margin-top: 0px;
 }
 
 .responsibilities{
     text-align: left;
+    font-size: small;
+    font-weight: 350;
 }
 
 .certificates{
     text-align: left;
+}
+
+.chapter_title{
+    font-weight: 600;
+}
+
+.job_dis{
+    font-weight: 500;
+}
+
+.company{
+    font-weight: 300;
+}
+
+.speciality{
+    font-weight: 500;
+}
+
+.school{
+    font-weight: 400;
 }
