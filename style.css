@@ -1,0 +1,34 @@
+html{
+    background: rgb(69, 69, 69);
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 165, 89);
+    text-align: center;
+}
+
+.my_name{
+    font-weight: 500;
+}
+
+.job_title{
+    font-weight: 100;
+}
+
+.samary{
+    text-align: center;
+}
+
+.phone{
+    text-align: right;
+}
+
+.email{
+    text-align: right;
+}
+
+.responsibilities{
+    text-align: left;
+}
+
+.certificates{
+    text-align: left;
+}
