@@ -13,12 +13,12 @@ body {
 }
 
 .left-column {
-    flex: 1; /* Takes up 30% of the container */
+    flex: 1; 
     padding: 20px;
 }
 
 .right-column {
-    flex: 2; /* Takes up 70% of the container */
+    flex: 2; 
     padding: 20px;
 }
 
@@ -45,5 +45,3 @@ h2 {
     text-align: right;
     border-radius: 5px;
 }
-
-/* Customize the styles further as needed to match your preferred design. */
