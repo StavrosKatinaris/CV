@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stavros' Business Card</title>
+  <style>
+    body {
+      background-color: #1c1c1e;
+      color: #ffffff;
+      font-family: 'Helvetica', sans-serif;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #card {
+      background-color: #2c2c2e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align:left;
+    }
+
+    button {
+      background-color: #007aff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+      transform: translateX(40px)
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #card a {
+      color: #b6d9ff; 
+      text-decoration: none; 
+    }
+
+    #card a:hover {
+      color: #60adff; 
+    }
+
+  </style>
+</head>
+<body>
+  <div id="card">
+    <h1>Stavros Katinaris</h1>
+    <p>Python Developer 🐍</p>
+    <p>Email: <a href="mailto: stavroskatinaris@gmail.com">Contact me 📧</a></p>
+    <p>Phone: <a href="tel:698-756-3753">+306987563753 📞</a></p>
+    <p>GitHub: <a href="//github.com/StavrosKatinaris">Check my code 💻</a></p>
+    <p>Full CV: <a href="https://stavroskatinaris.github.io/Full_CV/">My Career Journey 📑</a></p>
+    <p>LinkedIn: <a href="//www.linkedin.com/in/stavros-katinaris-02b646169">Let's connect 📌</a></p>
+    <button onclick="downloadContact()">Add to Contacts</button>
+  </div>
+
+  <script>
+    function downloadContact() {
+      const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:Stavros Katinaris
+EMAIL:stavroskatinaris@gmail.com
+TEL:+306987563753
+TITLE:Python Developer
+URL:https://github.com/StavrosKatinaris
+item1.URL:https://www.linkedin.com/in/stavros-katinaris-02b646169/
+item1.X-ABLabel:_$!<LinkedIn>!$_
+BDAY:19960719
+END:VCARD`;
+
+      const blob = new Blob([vCard], { type: 'text/vcard' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = 'StavrosContact.vcf';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
