@@ -1,0 +1,86 @@
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #2a2a2d, #161617);
+      font-family: "Inter", sans-serif;
+      color: #fff;
+    }
+
+    #card {
+      background: #1f1f207e;
+      width: 250px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(1, 14, 194, 0.575);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgb(255, 0, 0);
+    }
+
+    #card img {
+      border-radius: 5%;
+      width: 160px;
+      height: 180px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 20px 0 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    a {
+      color: #79b8ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: #a3d0ff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px 0;
+      background: linear-gradient(135deg, #ee1b3e, #1500d4);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+      font-weight: 600;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+  
+
+/* Animated background canvas (behind the card) */
+#bg{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure the card stays above the canvas */
+#card{
+  position: relative;
+  z-index: 1;
+}
+
